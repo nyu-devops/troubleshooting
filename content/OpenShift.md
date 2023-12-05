@@ -6,7 +6,7 @@
 
 Set mount path to `/var/lib/postgresql` instead of `/var/lib/postgresql/data`.
 
-<details>
+<details markdown="1">
 <summary>Detailed Explanation</summary>
 
 The error indicates that the PostgreSQL instance in an OpenShift environment lacks the necessary permissions to access the data directory. The solution is to adjust the mount path in the configuration.
@@ -25,8 +25,6 @@ Remember to adjust the PostgreSQL deployment configurations to ensure that the d
 
 `</details>`
 
-
-
 ## Problem Statement
 
 Difficulty logging into a Red Hat account using university email, with repeated password resets failing to resolve the issue.
@@ -37,7 +35,7 @@ Disable any active password manager extensions, and attempt to log in using the 
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Detailed Explanation</summary>
 
 #### Context

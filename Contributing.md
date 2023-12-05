@@ -38,7 +38,7 @@ Briefly describe the problem.
 
 Provide the immediate solution or workaround.
 
-<details> 
+<details markdown="1"> 
 <summary>Explanation</summary>
 1. In Depth Explanation
 </details>

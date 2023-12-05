@@ -1,4 +1,4 @@
-# Welcome to the NYU DevOps Troubleshooting Guide! This repository is dedicated to providing solutions and explanations for various DevOps-related issues. Whether you're encountering problems with Docker, Kubernetes, CI/CD processes, or other DevOps tools, this guide aims to help.
+Welcome to the NYU DevOps Troubleshooting Guide! This repository is dedicated to providing solutions and explanations for various DevOps-related issues. Whether you're encountering problems with Docker, Kubernetes, CI/CD processes, or other DevOps tools, this guide aims to help.
 
 <form>
   <input type="text" id="search-term">
@@ -18,22 +18,25 @@
 Before diving into specific issues, here are some general solutions that might resolve common problems:
 
 - **Restart VSCode**: Sometimes, simply closing and reopening Visual Studio Code can resolve unexpected issues.
-- <details>
+- 
+<details markdown="1">
 <summary><bold>Clean Docker Environment</bold></summary>
+
   Docker can sometimes cache images or configurations that cause repeated errors. To ensure a fresh environment, use the following Docker commands to clean up:
 
-  1. `docker kill $(docker ps -q)`: Stops all running containers.
-  2. `docker rm $(docker ps -aq)`: Removes all containers.
-  3. `docker system prune --volumes -f`: Removes all stopped containers, unused networks, images, and optionally, volumes.
-  4. `docker volume rm $(docker volume ls -q)`: Removes all unused volumes.
-   </details>
+1. `docker kill $(docker ps -q)`: Stops all running containers.
+2. `docker rm $(docker ps -aq)`: Removes all containers.
+3. `docker system prune --volumes -f`: Removes all stopped containers, unused networks, images, and optionally, volumes.
+4. `docker volume rm $(docker volume ls -q)`: Removes all unused volumes.
 
-  ```bash
+</details>
+
+```bash
   docker kill $(docker ps -q)
   docker rm $(docker ps -aq)
   docker system prune --volumes -f
   docker volume rm $(docker volume ls -q)
-  ```
+```
 
 ---
 

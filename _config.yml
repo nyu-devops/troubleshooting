@@ -4,3 +4,14 @@ plugins:
 title: NYU DevOps Troubleshooting Guide
 description: A guide to troubleshooting common issues in the NYU DevOps class
 markdown: kramdown
+kramdown:
+  input: GFM
+
+author: NYU Devops TA - Dhruv Shetty
+
+###############################################
+# --- List of links in the navigation bar --- #
+###############################################
+
+navbar-links:
+  Home: README.md

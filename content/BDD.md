@@ -1,4 +1,3 @@
-
 # Behaviour Driven Development Issues
 
 ## Problem : Selenium WebDriver Not Found
@@ -9,7 +8,7 @@
 
 **Solution:** Use the `rofrano/pipeline-selenium` Docker image, which includes Chrome and chromedriver, in `.devcontainer/Dockerfile`.
 
-<details>
+<details markdown="1">
 <summary>Detailed Explanation:</summary>
 
     This issue occurs when the Selenium WebDriver, specifically 'chromedriver', is not found in the Docker container's PATH. To resolve this:
@@ -39,7 +38,7 @@ requests==2.31.0
 
 ```
 
-<details>
+<details markdown="1">
 <summary>Detailed Explanation:</summary>
 
     The error indicating that the 'behave' command is not found suggests it is not installed in the Docker container. To fix this:
@@ -56,7 +55,7 @@ requests==2.31.0
 
 **Solution:** Initially, test with `export DRIVER=firefox`. If this resolves the issue, make it permanent by setting `DRIVER: firefox` and `WAIT_SECONDS: 3` in `.devcontainer/docker-compose.yml`.
 
-<details>
+<details markdown="1">
 <summary>Detailed Explanation:</summary>
 
     To address Chromedriver's inconsistent behavior across different systems, follow these steps:
@@ -71,7 +70,7 @@ requests==2.31.0
     3.**Permanent Configuration**:
        - If the issue is resolved with Firefox, then make this change permanent.
        - In your project's `.devcontainer/docker-compose.yml`, add the following under the `environment` section:
-         ``         environment:            DRIVER: firefox            WAIT_SECONDS: 3         ``
+         ``        environment:            DRIVER: firefox            WAIT_SECONDS: 3        ``
        - `DRIVER: firefox` sets Firefox as the default WebDriver.
        - `WAIT_SECONDS: 3` reduces the wait time in case of errors, speeding up test execution.
 
@@ -86,8 +85,6 @@ requests==2.31.0
 
 ---`</details>`
 
-
-
 ### Problem Statement
 
 Behavior-driven development tests with `behave` are failing due to an assertion error despite receiving a 200 HTTP status code.
@@ -98,7 +95,7 @@ Ensure the database is correctly set up by running `flask db-create` and then ex
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Detailed Explanation</summary>
 
 #### Context
