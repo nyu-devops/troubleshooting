@@ -8,7 +8,10 @@ Users are experiencing issues where **`make lint`** runs successfully in a local
 
 To resolve the discrepancies between local linting and GitHub Actions, users should update their workflow configuration to match the **`workflow.yml`** file provided in the "[Lab Flask TDD Workflow](https://github.com/nyu-devops/lab-flask-tdd/blob/master/.github/workflows/ci.yml)." Additionally, they have two options for addressing the linting step.
 
-### Detailed Explanation:
+<details markdown="1">
+<summary>### Detailed Explanation:</summary>
+
+
 
 **Understanding the Problem:**
 
@@ -55,3 +58,5 @@ To resolve the discrepancies between local linting and GitHub Actions, users sho
 5. **Re-run GitHub Actions:**
     - Commit and push the changes to trigger the GitHub Actions workflow.
     - Monitor the Actions tab in the GitHub repository to ensure that the linting step passes successfully.
+
+</details>

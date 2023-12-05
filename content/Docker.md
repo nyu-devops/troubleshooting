@@ -18,6 +18,5 @@ Update [Dockerfile](https://github.com/nyu-devops/lab-flask-bdd/blob/c4654d806cd
 
 Alternatively, switch to using the binary package **`psycopg[binary]`** to avoid the need for compiling the package and installing additional dependencies.
 
-### Detailed Explanation:
 
 ---

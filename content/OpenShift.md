@@ -23,7 +23,7 @@ Note: It was also mentioned that changing the image to `postgres:15-alpine` reso
 
 Remember to adjust the PostgreSQL deployment configurations to ensure that the data persists across pod restarts and deployments.
 
-`</details>`
+</details>
 
 ## Problem Statement
 

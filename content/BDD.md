@@ -11,11 +11,11 @@
 <details markdown="1">
 <summary>Detailed Explanation:</summary>
 
-    This issue occurs when the Selenium WebDriver, specifically 'chromedriver', is not found in the Docker container's PATH. To resolve this:
+This issue occurs when the Selenium WebDriver, specifically 'chromedriver', is not found in the Docker container's PATH. To resolve this:
 
-    1.**Switch Docker Image**: Update the Dockerfile to use `rofrano/pipeline-selenium`. This image is pre-configured with Chrome and chromedriver.
-    3. **Rebuild Docker Container**: After updating the Dockerfile, **rebuild** the container to ensure the new configuration is applied.
-    4. **Verify Installation**: Check if 'chromedriver' is correctly installed and accessible by running a test command inside the container.
+1.**Switch Docker Image**: Update the Dockerfile to use `rofrano/pipeline-selenium`. This image is pre-configured with Chrome and chromedriver.
+3. **Rebuild Docker Container**: After updating the Dockerfile, **rebuild** the container to ensure the new configuration is applied.
+4. **Verify Installation**: Check if 'chromedriver' is correctly installed and accessible by running a test command inside the container.
 
 </details>
 
@@ -41,11 +41,11 @@ requests==2.31.0
 <details markdown="1">
 <summary>Detailed Explanation:</summary>
 
-    The error indicating that the 'behave' command is not found suggests it is not installed in the Docker container. To fix this:
+The error indicating that the 'behave' command is not found suggests it is not installed in the Docker container. To fix this:
 
-    1.**Check requirements.txt**: Ensure `behave` is listed in the `requirements.txt` file.
-    2. **Rebuild Container**: Rebuild the Docker container to install `behave` from the updated `requirements.txt`.
-    3. **Test Behave Installation**: Run a simple behave command to confirm it's now recognized in the container.
+1.**Check requirements.txt**: Ensure `behave` is listed in the `requirements.txt` file.
+2. **Rebuild Container**: Rebuild the Docker container to install `behave` from the updated `requirements.txt`.
+3. **Test Behave Installation**: Run a simple behave command to confirm it's now recognized in the container.
 
 ## Problem : Chromedriver Unstable or Failing
 
@@ -58,32 +58,32 @@ requests==2.31.0
 <details markdown="1">
 <summary>Detailed Explanation:</summary>
 
-    To address Chromedriver's inconsistent behavior across different systems, follow these steps:
+To address Chromedriver's inconsistent behavior across different systems, follow these steps:
 
-    1.**Temporary WebDriver Switch**:
-       - Run `export DRIVER=firefox` in the Docker environment to temporarily switch to Firefox WebDriver.
-       - This change applies only to the current session and helps determine if Firefox WebDriver resolves the issue.
+1.**Temporary WebDriver Switch**:
+   - Run `export DRIVER=firefox` in the Docker environment to temporarily switch to Firefox WebDriver.
+   - This change applies only to the current session and helps determine if Firefox WebDriver resolves the issue.
 
-    2.**Test the Change**:
-       - Conduct your Selenium tests again to check if the issue with Chromedriver is resolved using Firefox WebDriver.
+2.**Test the Change**:
+   - Conduct your Selenium tests again to check if the issue with Chromedriver is resolved using Firefox WebDriver.
 
-    3.**Permanent Configuration**:
-       - If the issue is resolved with Firefox, then make this change permanent.
-       - In your project's `.devcontainer/docker-compose.yml`, add the following under the `environment` section:
-         ``        environment:            DRIVER: firefox            WAIT_SECONDS: 3        ``
-       - `DRIVER: firefox` sets Firefox as the default WebDriver.
-       - `WAIT_SECONDS: 3` reduces the wait time in case of errors, speeding up test execution.
+3.**Permanent Configuration**:
+   - If the issue is resolved with Firefox, then make this change permanent.
+   - In your project's `.devcontainer/docker-compose.yml`, add the following under the `environment` section:
+   ``        environment:            DRIVER: firefox            WAIT_SECONDS: 3        ``
+   - `DRIVER: firefox` sets Firefox as the default WebDriver.
+   - `WAIT_SECONDS: 3` reduces the wait time in case of errors, speeding up test execution.
 
-    4.**Rebuild Docker Environment**:
-       - After updating the `docker-compose.yml` file, rebuild the Docker environment to apply these changes.
-       - This ensures that all future tests will automatically use Firefox WebDriver.
+4.**Rebuild Docker Environment**:
+   - After updating the `docker-compose.yml` file, rebuild the Docker environment to apply these changes.
+   - This ensures that all future tests will automatically use Firefox WebDriver.
 
-    5.**Verify Stability**:
-       - Run the tests again in the updated Docker environment to confirm the stability and consistency of Selenium tests with Firefox WebDriver.
+5.**Verify Stability**:
+   - Run the tests again in the updated Docker environment to confirm the stability and consistency of Selenium tests with Firefox WebDriver.
 
 </details>
 
----`</details>`
+---
 
 ### Problem Statement
 

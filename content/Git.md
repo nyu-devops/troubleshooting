@@ -9,8 +9,8 @@ To bypass the ownership checks by Git and remove the warning, execute the follow
 ```bash
 git config --global --add safe.directory /app
 ```
-
-### **Detailed Explanation:**
+<details markdown="1">
+<summary>### **Detailed Explanation:**</summary>
 
 **Understanding the Problem:**
 
@@ -45,3 +45,5 @@ git config --global --add safe.directory /app
 - This solution assumes that the user has assessed the security implications and determined that the directory is indeed safe to use.
 - For security reasons, it's generally better to understand and fix the underlying permission issues rather than globally disabling ownership checks. The immediate solution is a workaround and not a fundamental fix.
 - Users should be cautious about using **`-global`** configuration changes, as they apply to all repositories for the current user. If the environment is shared or used for multiple projects, consider whether this change is appropriate.
+
+</details>
