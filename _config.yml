@@ -1,0 +1,5 @@
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+title: NYU Devops Troubleshoot Guide
+description: Contains an overall guide of all the usual issues that may occur during the NYU Devops course with John Rofrano. This guide is created by Dhruv Shetty (dhruvshetty.com)
