@@ -1,10 +1,7 @@
-
-# NYU DevOps Troubleshooting Guide
-
 Welcome to the NYU DevOps Troubleshooting Guide! This repository is dedicated to providing solutions and explanations for various DevOps-related issues. Whether you're encountering problems with Docker, Kubernetes, CI/CD processes, or other DevOps tools, this guide aims to help.
 
 <form>
-  <input type="text" id="search-term">
+  <input type="text" id="search-term" style="width: 40vw;" >
   <button type="submit" onclick="search()">Search</button>  
 </form>
 
@@ -36,18 +33,6 @@ Before diving into specific issues, here are some general solutions that might r
   ```
 
 ---
-
-### Troubleshooting Sections
-
-Explore the following sections for more specific troubleshooting guides:
-
-- [General Issues](content/General.md): General issues with the Repository
-- [BDD Issues](content/BDD.md): Guidance on issues related to Behavior-Driven Development.
-- [Kubernetes Issues](content/Kubernetes.md): Solutions for common Kubernetes challenges.
-- [Docker Issues](content/Docker.md): Help with Docker-related problems.
-- [CI/CD Issues](content/CICD.md): Assistance with Continuous Integration and Continuous Deployment processes.
-- [Git Issues](content/Git.md): Tips for resolving issues related to Git.
-- [OpenShift Issues](content/OpenShift.md) : Issues faced with OpenShift
 
 ---
 
