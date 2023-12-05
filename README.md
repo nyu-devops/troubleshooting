@@ -1,7 +1,7 @@
-Welcome to the NYU DevOps Troubleshooting Guide! This repository is dedicated to providing solutions and explanations for various DevOps-related issues. Whether you're encountering problems with Docker, Kubernetes, CI/CD processes, or other DevOps tools, this guide aims to help.
+# Welcome to the NYU DevOps Troubleshooting Guide! This repository is dedicated to providing solutions and explanations for various DevOps-related issues. Whether you're encountering problems with Docker, Kubernetes, CI/CD processes, or other DevOps tools, this guide aims to help.
 
 <form>
-  <input type="text" id="search-term" style="width: 40vw;" >
+  <input type="text" id="search-term">
   <button type="submit" onclick="search()">Search</button>  
 </form>
 
@@ -18,12 +18,15 @@ Welcome to the NYU DevOps Troubleshooting Guide! This repository is dedicated to
 Before diving into specific issues, here are some general solutions that might resolve common problems:
 
 - **Restart VSCode**: Sometimes, simply closing and reopening Visual Studio Code can resolve unexpected issues.
-- **Clean Docker Environment**: Docker can sometimes cache images or configurations that cause repeated errors. To ensure a fresh environment, use the following Docker commands to clean up:
+- <details>
+<summary><bold>Clean Docker Environment</bold></summary>
+  Docker can sometimes cache images or configurations that cause repeated errors. To ensure a fresh environment, use the following Docker commands to clean up:
 
   1. `docker kill $(docker ps -q)`: Stops all running containers.
   2. `docker rm $(docker ps -aq)`: Removes all containers.
   3. `docker system prune --volumes -f`: Removes all stopped containers, unused networks, images, and optionally, volumes.
   4. `docker volume rm $(docker volume ls -q)`: Removes all unused volumes.
+   </details>
 
   ```bash
   docker kill $(docker ps -q)
@@ -33,6 +36,18 @@ Before diving into specific issues, here are some general solutions that might r
   ```
 
 ---
+
+### Troubleshooting Sections
+
+Explore the following sections for more specific troubleshooting guides:
+
+- [General Issues](content/General.md): General issues with the Repository
+- [BDD Issues](content/BDD.md): Guidance on issues related to Behavior-Driven Development.
+- [Kubernetes Issues](content/Kubernetes.md): Solutions for common Kubernetes challenges.
+- [Docker Issues](content/Docker.md): Help with Docker-related problems.
+- [CI/CD Issues](content/CICD.md): Assistance with Continuous Integration and Continuous Deployment processes.
+- [Git Issues](content/Git.md): Tips for resolving issues related to Git.
+- [OpenShift Issues](content/OpenShift.md) : Issues faced with OpenShift
 
 ---
 
