@@ -27,6 +27,7 @@ Before diving into specific issues, here are some general solutions that might r
 
 Explore the following sections for more specific troubleshooting guides:
 
+- [General Issues](content/General.md): General issues with the Repository
 - [BDD Issues](content/BDD.md): Guidance on issues related to Behavior-Driven Development.
 - [Kubernetes Issues](content/Kubernetes.md): Solutions for common Kubernetes challenges.
 - [Docker Issues](content/Docker.md): Help with Docker-related problems.
