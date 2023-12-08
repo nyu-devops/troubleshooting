@@ -57,3 +57,39 @@ The user faced challenges accessing their Red Hat account. Despite multiple pass
 This scenario underscores the need to consider all aspects of the login procedure, including the potential impact of external tools like password managers, which might complicate the authentication process.
 
 </details>
+
+## Error in PyLint and Green Tasks when building Pipeline
+
+**Problem:**
+Pipeline fails at lint and green tasks due to missing PostgreSQL drivers during `pip install`.
+
+**Solution:**
+Use `docker.io/rofrano/nyu-devops-base:fa23` for lint and green tasks or install PostgreSQL and gcc before `pip install`.
+
+<details markdown="1">
+<summary>Detailed Explanation</summary>
+
+When building a pipeline, if the lint and green tasks fail because they cannot build PostgreSQL drivers during `pip install -r requirements.txt`, there are two primary solutions:
+
+1. **Use a Pre-configured Docker Image:**Replace your current image in the Dockerfile with `docker.io/rofrano/nyu-devops-base:fa23`, which already contains the necessary PostgreSQL libraries. This method avoids the error by providing an environment that's pre-set with the requirements.
+
+   ```yaml
+   steps:
+     - name: green
+       image: rofrano/nyu-devops-base:fa23
+       workingDir: $(workspaces.source.path)
+   ```
+2. **Install Dependencies Manually:**
+   Before running `pip install`, ensure that the PostgreSQL library and the gcc compiler are installed. This can be achieved by adding the following steps to your pipeline configuration:
+
+   ```bash
+   apt-get update
+   apt-get install -y gcc libpq-dev
+   pip install -r requirements.txt
+   ```
+
+   Note: If using the Docker image as suggested, prefix any `root` commands with `sudo` for appropriate permissions, like `sudo pip install`.
+
+Each method has its benefits: using the pre-configured image simplifies the setup, while manually installing dependencies offers more control over the environment.
+
+</details>
