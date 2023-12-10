@@ -15,10 +15,10 @@ Welcome to our project's contribution guide! We're excited to have you on board 
 
 When contributing a new troubleshooting guide, please structure your content as follows:
 
-1. **Problem Faced**:
+1. **Problem**:
 
    - Clearly state the problem. This should be a concise description of what the issue is.
-2. **Immediate Solution**:
+2. **Solution**:
 
    - Provide a direct solution or workaround that can be quickly implemented to address the problem.
 3. **Explanation**:
@@ -30,11 +30,15 @@ When contributing a new troubleshooting guide, please structure your content as 
 Please adhere to the following format when writing your guide:
 
 ```markdown
-### Problem Faced
+# Page Title
+
+---
+
+## Problem: <title of problem>
 
 Briefly describe the problem.
 
-### Immediate Solution
+### Solution
 
 Provide the immediate solution or workaround.
 
@@ -42,6 +46,8 @@ Provide the immediate solution or workaround.
 <summary>Explanation</summary>
 1. In Depth Explanation
 </details>
+
+---
 ```
 
 Offer a detailed explanation of both the problem and the solution.

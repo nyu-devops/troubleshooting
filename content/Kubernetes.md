@@ -2,9 +2,11 @@
 
 ## Kubernetes Issue: Pods Not Reaching READY State
 
-**Problem**: Pods in Kubernetes (k8s) are not reaching the READY state, showing a status of READY 0/1.
+Pods in Kubernetes (k8s) are not reaching the READY state, showing a status of READY 0/1.
 
-**Solution**: Add a liveness probe to your pod configuration using `kubectl`.
+### Solution
+
+Add a liveness probe to your pod configuration using `kubectl`.
 
 <details markdown="1">
 <summary>Detailed Explanation</summary>

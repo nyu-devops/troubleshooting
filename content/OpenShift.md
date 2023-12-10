@@ -1,6 +1,6 @@
 # Open Shift Issues
 
-## PostgreSQL permissions error in OpenShift due to incorrect mount path.
+## Problem : PostgreSQL permissions error in OpenShift due to incorrect mount path.
 
 ### Solution
 
@@ -25,11 +25,11 @@ Remember to adjust the PostgreSQL deployment configurations to ensure that the d
 
 </details>
 
-## Problem Statement
+## Problem : Difficulty logging in using nyu.edu
 
 Difficulty logging into a Red Hat account using university email, with repeated password resets failing to resolve the issue.
 
-### Immediate Solution
+### Solution
 
 Disable any active password manager extensions, and attempt to log in using the email address instead of the user ID.
 
@@ -58,12 +58,12 @@ This scenario underscores the need to consider all aspects of the login procedur
 
 </details>
 
-## Error in PyLint and Green Tasks when building Pipeline
+## Problem : Error in PyLint and Green Tasks when building Pipeline
 
-**Problem:**
 Pipeline fails at lint and green tasks due to missing PostgreSQL drivers during `pip install`.
 
-**Solution:**
+### Solution
+
 Use `docker.io/rofrano/nyu-devops-base:fa23` for lint and green tasks or install PostgreSQL and gcc before `pip install`.
 
 <details markdown="1">

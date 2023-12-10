@@ -48,7 +48,7 @@ Explore the following sections for more specific troubleshooting guides:
 - [BDD Issues](content/BDD.md): Guidance on issues related to Behavior-Driven Development.
 - [Kubernetes Issues](content/Kubernetes.md): Solutions for common Kubernetes challenges.
 - [Docker Issues](content/Docker.md): Help with Docker-related problems.
-- [CI/CD Issues](content/CICD.md): Assistance with Continuous Integration and Continuous Deployment processes.
+- [CI (Github Action) Issues](content/GithubActions.md): Assistance with Continuous Integration and Continuous Deployment processes.
 - [Git Issues](content/Git.md): Tips for resolving issues related to Git.
 - [OpenShift Issues](content/OpenShift.md) : Issues faced with OpenShift
 

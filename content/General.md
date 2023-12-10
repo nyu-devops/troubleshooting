@@ -1,10 +1,10 @@
 # General Issues
 
-## Issue 1: Service fails to start due to port 8000 / 8080 already in use.
+## Problem : Service fails to start due to port 8000 / 8080 already in use.
 
-**Problem** :  Service fails to start due to port 8000 / 8080 already in use.
+Service fails to start due to port 8000 / 8080 already in use.
 
-**Solution :**
+### Solution
 
 Kill process on port 8000: `sudo fuser -k 8000/tcp`
 Kill process on port 8000: `sudo fuser -k 8080/tcp`
